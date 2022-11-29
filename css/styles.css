@@ -560,6 +560,10 @@ ul {
 
  /* ПІДПИШІТЬСЯ НА РОЗСИЛКУ */
 
+ .footer-form {
+    margin-left: auto; 
+ }
+
  .footer-email {
     width: 358px;
 	padding: 16px;
@@ -718,6 +722,11 @@ ul {
 }
 
 /* -------Модальне вікно ------- */
+.modal-input, .modal-textarea {
+    font-size: 12px;
+}
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -825,7 +834,7 @@ margin-bottom: 12px;
 
 .input-wrapper {
     position: relative;
-    margin-bottom: 10px;
+    
 
 }
 
@@ -845,14 +854,13 @@ margin-bottom: 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
-    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .modal-textarea:focus,
 .modal-textarea:hover {
-    border: none;
-    outline: 1px solid #2196F3;
+    border-color: var(--accent-color);
 }
 
 
@@ -879,7 +887,7 @@ margin-bottom: 12px;
     }
 
  .modal-field  {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     }
 
 
@@ -918,13 +926,14 @@ margin-bottom: 12px;
 
   .checkbox:focus + .checkbox-text span,
   .checkbox:hover + .checkbox-text span  {
-    border-color: #2196F3;
+    border-color: var(--accent-color);
   
   }
  
 .checkbox{
     appearance: none; 
-    position: absolute;   
+    position: absolute;  
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .checkbox-text a {
@@ -934,10 +943,6 @@ margin-bottom: 12px;
     color: #2196F3;
 
 }
-
-
-
-
 
 .submit-btn {
     display: block;
